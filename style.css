@@ -1,55 +1,79 @@
-*{
-    margin: 0px;
-    padding: 0px; 
-    font-size: 1.2rem;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
-ul, li, a{
-    list-style: none;
-    text-decoration: none;
-    color: white;
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
 }
-.header{
-    background-color: dimgray;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    align-items: center;
-    flex-wrap: wrap;
+.header {
+  background-color: dimgray;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.menu{
-display: flex;
+.menu {
+  display: flex;
 }
 
-.menu li{
-    margin-left: 10px;
+.menu li {
+  margin-left: 10px;
 }
 /* código para aumentar a área do click */
-.menu li a{
-    display: block;
-    padding: 10px;
-    background-color: blueviolet; /*visualizar a área total do click */
+.menu li a {
+  display: block;
+  padding: 10px;
+  background-color: blueviolet; /*visualizar a área total do click */
 }
-h1{
-    text-align: center;
-    margin-top: 50px;
+h1 {
+  text-align: center;
+  margin-top: 50px;
 }
-p{
-    text-align: center;
+p {
+  text-align: center;
 }
-img{ /*imagem responsiva */
-    max-width: 100%;
-    display: block;
+img {
+  /*imagem responsiva */
+  max-width: 100%;
+  display: block;
 }
 
-.flex{
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 800px;
-    margin: 0 auto; /* alinhar ao centro após ultrapassar os 800px */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto; /* alinhar ao centro*/
 }
 /* ativa o flex das DIVs, ativa o flex shrink e define o tamanho base em 200px */
-.flex div{
-    flex: 1 1 200px; /*[flex-grow] [flex-shrink] [flex-basis] */
-    margin: 10px; /*espaçamento entre as divs */
+.flex div {
+  flex: 1 1 200px; /*[flex-grow] [flex-shrink] [flex-basis] */
+  margin: 10px; /*espaçamento entre as divs */
+}
+
+/*GRID LAYOUT */
+
+.grid1 {
+  display: grid; /* ativando o grid layout*/
+  grid-template-columns: repeat(3, 1fr); /*declarando 3 colunas */
+  max-width: 800px;
+  margin: 0 auto; /* alinhar ao centro*/
+  grid-gap: 20px; /* espaçamento entre os itens*/
+}
+/* seletor CSS para escolher determinada div; nesse caso, será aplicado apenas no item/div 5.
+.grid1 div:nth-child(5) {
+  background-color: red;
+}*/
+.grid1 div:nth-child(n + 4) {
+  /* seletor CSS para escolher determinada div; nesse caso, apartir do 4 item será aplicado os estilos abaixo.*/
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  align-items: center;
 }
