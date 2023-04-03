@@ -34,7 +34,9 @@ h1{
     text-align: center;
     margin-top: 50px;
 }
-
+p{
+    text-align: center;
+}
 img{ /*imagem responsiva */
     max-width: 100%;
     display: block;
