@@ -75,5 +75,23 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
-  align-items: center;
+  align-items: center; /*texto centralizado */
+}
+.grid1 div.anuncio{ /*anuncio será exibido na coluna 1 e irá pegar entre a 2 e 5 linha*/
+  grid-column: 1; 
+  grid-row: 2/5;
+  display: block;
+}
+
+@media (max-width: 600px){
+  .grid1{
+    grid-template-columns: repeat(2, 1fr); /*layout passa a ter apenas 2 colunas */
+  }
+  .grid1 div:nth-child(n + 4){
+    display: block;
+  }
+  .grid1 .anuncio{ /*anuncio volta a ocupar apenas 1 linha */
+    grid-column: auto;
+    grid-row: auto;
+  }
 }
