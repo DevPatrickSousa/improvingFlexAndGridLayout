@@ -95,3 +95,16 @@ img {
     grid-row: auto;
   }
 }
+
+
+                        /*GRID LAYOUT 2*/
+
+
+.grid2{
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  grid-gap: 20px;
+  max-width: 800px;
+  padding: 10px;
+  margin: 0 auto;
+}
