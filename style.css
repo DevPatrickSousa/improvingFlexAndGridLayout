@@ -108,3 +108,17 @@ img {
   padding: 10px;
   margin: 0 auto;
 }
+
+@media (max-width: 600px){
+  .grid2{ /*quando a tela tiver 600px de largura terá apenas 1 coluna */
+    grid-template-columns: 1fr;
+  }
+  .sidebar{ /*itens ficarão um ao lado do outro e terá a opção de scroll. */
+    display: flex;
+    overflow: scroll;
+  }
+  .sidebar div{ /*ativa o flex dos itens da sidebar, itens não irão crescer, e o tamanho base é 200px */
+    flex: 1 0 200px;
+    margin: 0 10px;
+  }
+}
