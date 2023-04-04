@@ -77,30 +77,30 @@ img {
   grid-gap: 10px;
   align-items: center; /*texto centralizado */
 }
-.grid1 div.anuncio{ /*anuncio será exibido na coluna 1 e irá pegar entre a 2 e 5 linha*/
-  grid-column: 1; 
+.grid1 div.anuncio {
+  /*anuncio será exibido na coluna 1 e irá pegar entre a 2 e 5 linha*/
+  grid-column: 1;
   grid-row: 2/5;
   display: block;
 }
 
-@media (max-width: 600px){
-  .grid1{
-    grid-template-columns: repeat(2, 1fr); /*layout passa a ter apenas 2 colunas */
+@media (max-width: 600px) {
+  .grid1 {
+    grid-template-columns: repeat(2,1fr); /*layout passa a ter apenas 2 colunas */
   }
-  .grid1 div:nth-child(n + 4){
+  .grid1 div:nth-child(n + 4) {
     display: block;
   }
-  .grid1 .anuncio{ /*anuncio volta a ocupar apenas 1 linha */
+  .grid1 .anuncio {
+    /*anuncio volta a ocupar apenas 1 linha */
     grid-column: auto;
     grid-row: auto;
   }
 }
 
+/*GRID LAYOUT 2*/
 
-                        /*GRID LAYOUT 2*/
-
-
-.grid2{
+.grid2 {
   display: grid;
   grid-template-columns: 1fr 200px;
   grid-gap: 20px;
@@ -109,16 +109,34 @@ img {
   margin: 0 auto;
 }
 
-@media (max-width: 600px){
-  .grid2{ /*quando a tela tiver 600px de largura terá apenas 1 coluna */
+@media (max-width: 600px) {
+  .grid2 {
+    /*quando a tela tiver 600px de largura terá apenas 1 coluna */
     grid-template-columns: 1fr;
   }
-  .sidebar{ /*itens ficarão um ao lado do outro e terá a opção de scroll. */
+  .sidebar {
+    /*itens ficarão um ao lado do outro e terá a opção de scroll. */
     display: flex;
     overflow: scroll;
   }
-  .sidebar div{ /*ativa o flex dos itens da sidebar, itens não irão crescer, e o tamanho base é 200px */
+  .sidebar div {
+    /*ativa o flex dos itens da sidebar, itens não irão crescer, e o tamanho base é 200px */
     flex: 1 0 200px;
     margin: 0 10px;
   }
+}
+
+/*GRID LAYOUT 3*/
+
+.grid3{/*declarando layout com 2 colunas e colocando ao centro */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 10px;
+}
+.grid3-item:nth-child(1){/*1 coluna irá ocupar 3 linhas */
+  grid-row: 1 / 3;
+  border-bottom: 1px solid red; /*visualizar a ultima linha que está sendo ocupada */
 }
